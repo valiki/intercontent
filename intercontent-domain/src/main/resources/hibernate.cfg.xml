@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="intercontent-sessionfactory">
+  <property name="hibernate.connection.driver_class">${hibernate.connection.driver_class}</property>
+  <property name="hibernate.dialect">${hibernate.dialect}</property>
+  <property name="hibernate.default_entity_mode">pojo</property>
+  <!-- <property name="hibernate.hbm2ddl.auto">none</property> -->
+  <property name="hibernate.connection.autocommit">false</property>
+  <mapping package="net.sunnycore.intercontent.domain"/>
+  <mapping class="net.sunnycore.intercontent.domain.Link"/>
+  <mapping class="net.sunnycore.intercontent.domain.Content"/>
+  <mapping class="net.sunnycore.intercontent.domain.ContentText"/>
+  <mapping class="net.sunnycore.intercontent.domain.LinkTranslation"/>
+  <mapping class="net.sunnycore.intercontent.domain.ContentTranslation"/>
+  <mapping class="net.sunnycore.intercontent.domain.Comment"/>
+  <mapping class="net.sunnycore.intercontent.domain.CommentTranslation"/>
+  <mapping class="net.sunnycore.intercontent.domain.PrincipalUser"/>
+  <mapping class="net.sunnycore.intercontent.domain.User"/>
+ </session-factory>
+</hibernate-configuration>
